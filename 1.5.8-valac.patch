@@ -1,0 +1,14 @@
+http://code.google.com/p/waf/issues/detail?id=483
+
+--- origsrc/waf/wafadmin/Tools/vala.py	2009-07-20 01:21:46.000000000 -0500
++++ src/waf/wafadmin/Tools/vala.py	2009-07-20 10:51:36.150463900 -0500
+@@ -88,7 +88,8 @@ class valac_task(Task.Task):
+ 			else:
+ 				if first.parent.id != node.parent.id:
+ 					# issue #483
+-					shutil.move(first.parent.abspath(self.env) + os.sep + node.name, node.abspath(self.env))
++					if env['VALAC_VERSION'] < (0, 7, 0):
++						shutil.move(first.parent.abspath(self.env) + os.sep + node.name, node.abspath(self.env))
+ 		return result
+ 
+ 	def install(self):

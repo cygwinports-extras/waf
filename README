@@ -1,0 +1,236 @@
+waf
+------------------------------------------
+Waf is a Python-based framework for configuring, compiling and 
+installing applications. It derives from the concepts of other build 
+tools such as Scons, Autotools, CMake or Ant.
+
+Runtime requirements:
+  python-2.5.4-10
+
+Build requirements:
+  cygport-0.9.8-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  python-2.5.4-10
+
+Canonical website:
+  http://code.google.com/p/waf/
+
+Canonical download:
+  http://waf.googlecode.com/svn/trunk/
+
+-------------------------------------------
+
+Build instructions:
+  unpack waf-1.5.8.6447-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./waf-1.5.8.6447-X.cygport all
+
+This will create:
+  /usr/src/waf-1.5.8.6447-X-src.tar.bz2
+  /usr/src/waf-1.5.8.6447-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/waf
+  /usr/lib/waf-1.5.8-*/wafadmin/Build.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Build.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Build.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Configure.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Configure.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Configure.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Constants.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Constants.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Constants.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Environment.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Environment.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Environment.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Logs.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Logs.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Logs.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Node.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Node.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Node.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Options.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Options.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Options.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Runner.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Runner.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Runner.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Scripting.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Scripting.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Scripting.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Task.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Task.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Task.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/TaskGen.py
+  /usr/lib/waf-1.5.8-*/wafadmin/TaskGen.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/TaskGen.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/UnitTest.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/UnitTest.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/UnitTest.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/__init__.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/__init__.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/__init__.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ar.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ar.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ar.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/bison.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/bison.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/bison.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/boost.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/boost.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/boost.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ccroot.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ccroot.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ccroot.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cxx.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cxx.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_cxx.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_d.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_d.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/compiler_d.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/config_c.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/config_c.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/config_c.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cs.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cs.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cs.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cxx.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cxx.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/cxx.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/d.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/d.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/d.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dbus.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dbus.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dbus.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dmd.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dmd.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/dmd.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/flex.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/flex.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/flex.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gas.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gas.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gas.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gcc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gcc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gcc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gdc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gdc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gdc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/glib2.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/glib2.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/glib2.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnome.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnome.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnome.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnu_dirs.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnu_dirs.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gnu_dirs.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gob2.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gob2.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gob2.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gxx.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gxx.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/gxx.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icpc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icpc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/icpc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/intltool.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/intltool.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/intltool.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/javaw.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/javaw.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/javaw.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/kde4.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/kde4.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/kde4.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/libtool.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/libtool.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/libtool.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/lua.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/lua.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/lua.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/misc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/misc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/misc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/msvc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/msvc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/msvc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/nasm.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/nasm.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/nasm.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ocaml.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ocaml.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/ocaml.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/osx.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/osx.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/osx.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/perl.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/perl.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/perl.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/preproc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/preproc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/preproc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/python.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/python.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/python.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/qt4.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/qt4.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/qt4.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncxx.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncxx.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/suncxx.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/tex.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/tex.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/tex.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/vala.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/vala.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/vala.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/winres.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/winres.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Tools/winres.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/Utils.py
+  /usr/lib/waf-1.5.8-*/wafadmin/Utils.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/Utils.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/__init__.py
+  /usr/lib/waf-1.5.8-*/wafadmin/__init__.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/__init__.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/pproc.py
+  /usr/lib/waf-1.5.8-*/wafadmin/pproc.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/pproc.pyo
+  /usr/lib/waf-1.5.8-*/wafadmin/py3kfixes.py
+  /usr/lib/waf-1.5.8-*/wafadmin/py3kfixes.pyc
+  /usr/lib/waf-1.5.8-*/wafadmin/py3kfixes.pyo
+  /usr/share/doc/waf/ChangeLog
+  /usr/share/doc/waf/README
+  /usr/share/doc/waf/TODO
+
+------------------
+
+Port Notes:
+
+----- version 1.5.8.6447-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

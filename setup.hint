@@ -1,0 +1,6 @@
+category: Devel
+requires: python
+sdesc: "Python-based build system"
+ldesc: "Waf is a Python-based framework for configuring, compiling and 
+installing applications. It derives from the concepts of other build 
+tools such as Scons, Autotools, CMake or Ant."

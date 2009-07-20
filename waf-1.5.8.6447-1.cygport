@@ -1,0 +1,41 @@
+DESCRIPTION="Python-based build system"
+HOMEPAGE="http://code.google.com/p/waf/"
+SVN_URI="http://waf.googlecode.com/svn/trunk"
+SVN_REV=${PV[4]}
+SVN_MODULE=${PN}
+
+inherit svn
+
+PATCH_URI="
+	1.5.8-convenience-libs.patch
+	1.5.8-demos-implib.patch
+	1.5.8-intltool.patch
+	1.5.8-tests-cygwin.patch
+	1.5.8-valac.patch
+"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	./waf-light configure --prefix=/usr
+	./waf-light --make-waf --strip
+}
+
+src_test() {
+	cd ${B}
+	./waf-light check || true
+
+	cd ${B}/demos
+	./run-all --all || true
+}
+
+src_install() {
+	local REVISION VERSION
+
+	cd ${B}
+	yes | DESTDIR=${D} ./waf-light install
+
+	eval $(grep -ah '^VERSION=' ${D}/usr/bin/waf)
+	eval $(grep -ah '^REVISION=' ${D}/usr/bin/waf)
+	mv ${D}/usr/lib/waf-* ${D}/usr/lib/waf-${VERSION}-${REVISION}
+}
