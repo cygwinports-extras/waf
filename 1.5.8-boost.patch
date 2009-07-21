@@ -1,0 +1,11 @@
+--- origsrc/waf/wafadmin/Tools/boost.py	2009-07-20 15:22:56.000000000 -0500
++++ src/waf/wafadmin/Tools/boost.py	2009-07-20 17:56:29.780073300 -0500
+@@ -244,7 +244,7 @@ def find_boost_library(self, lib, kw):
+ 	(libname, file) = (None, None)
+ 	if kw['static'] in [STATIC_NOSTATIC, STATIC_BOTH]:
+ 		st_env_prefix = 'LIB'
+-		files = libfiles(lib, v['shlib_PATTERN'], lib_paths)
++		files = libfiles(lib, v['implib_PATTERN'], lib_paths)
+ 		(libname, file) = find_library_from_list(lib, files)
+ 	if libname is None and kw['static'] in [STATIC_ONLYSTATIC, STATIC_BOTH]:
+ 		st_env_prefix = 'STATICLIB'

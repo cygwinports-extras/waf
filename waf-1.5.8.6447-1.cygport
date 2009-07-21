@@ -7,9 +7,11 @@ SVN_MODULE=${PN}
 inherit svn
 
 PATCH_URI="
+	1.5.8-boost.patch
 	1.5.8-convenience-libs.patch
 	1.5.8-demos-implib.patch
 	1.5.8-intltool.patch
+	1.5.8-perl.patch
 	1.5.8-tests-cygwin.patch
 	1.5.8-valac.patch
 "

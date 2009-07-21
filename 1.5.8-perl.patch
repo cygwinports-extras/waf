@@ -1,0 +1,16 @@
+--- origsrc/waf/wafadmin/Tools/perl.py	2009-07-20 15:22:56.000000000 -0500
++++ src/waf/wafadmin/Tools/perl.py	2009-07-20 15:38:55.613187000 -0500
+@@ -98,11 +98,11 @@ def check_perl_ext_devel(conf):
+ 	def read_out(cmd):
+ 		return Utils.to_list(Utils.cmd_output(perl + cmd))
+ 
+-	conf.env["LINKFLAGS_PERLEXT"] = read_out(" -MConfig -e'print $Config{lddlflags}'")
++	conf.env["LINKFLAGS_PERLEXT"] = read_out(" -MExtUtils::Embed -e ldopts")
+ 	conf.env["CPPPATH_PERLEXT"] = read_out(" -MConfig -e'print \"$Config{archlib}/CORE\"'")
+ 	conf.env["CCFLAGS_PERLEXT"] = read_out(" -MConfig -e'print \"$Config{ccflags} $Config{cccdlflags}\"'")
+ 
+-	conf.env["XSUBPP"] = read_out(" -MConfig -e'print \"$Config{privlib}/ExtUtils/xsubpp$Config{exe_ext}\"'")
++	conf.env["XSUBPP"] = read_out(" -MConfig -e'print \"$Config{privlib}/ExtUtils/xsubpp\"'")
+ 	conf.env["EXTUTILS_TYPEMAP"] = read_out(" -MConfig -e'print \"$Config{privlib}/ExtUtils/typemap\"'")
+ 
+ 	if not getattr(Options.options, 'perlarchdir', None):
