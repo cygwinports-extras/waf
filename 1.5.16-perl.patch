@@ -1,0 +1,15 @@
+--- origsrc/waf-1.5.16/wafadmin/Tools/perl.py	2010-02-16 15:42:45.000000000 -0600
++++ src/waf-1.5.16/wafadmin/Tools/perl.py	2010-05-12 21:25:01.634617500 -0500
+@@ -91,10 +91,10 @@ def check_perl_ext_devel(conf):
+ 	def read_out(cmd):
+ 		return Utils.to_list(Utils.cmd_output([conf.env.PERL, '-MConfig', '-e', cmd]))
+ 
+-	conf.env.LINKFLAGS_PERLEXT = read_out('print $Config{lddlflags}')
++	conf.env.LINKFLAGS_PERLEXT = read_out('print "$Config{lddlflags} -L$Config{archlibexp}/CORE -lperl"')
+ 	conf.env.CPPPATH_PERLEXT   = read_out('print "$Config{archlib}/CORE"')
+ 	conf.env.CCFLAGS_PERLEXT   = read_out('print "$Config{ccflags} $Config{cccdlflags}"')
+-	conf.env.XSUBPP            = read_out('print "$Config{privlib}/ExtUtils/xsubpp$Config{exe_ext}"')
++	conf.env.XSUBPP            = read_out('print "$Config{privlib}/ExtUtils/xsubpp"')
+ 	conf.env.EXTUTILS_TYPEMAP  = read_out('print "$Config{privlib}/ExtUtils/typemap"')
+ 	conf.env.perlext_PATTERN   = '%s.' + read_out('print $Config{dlext}')[0]
+ 

@@ -1,19 +1,14 @@
 DESCRIPTION="Python-based build system"
 HOMEPAGE="http://code.google.com/p/waf/"
-SVN_URI="http://waf.googlecode.com/svn/trunk"
-SVN_REV=${PV[4]}
-SVN_MODULE=${PN}
-
-inherit svn
+SRC_URI="http://waf.googlecode.com/files/${P}.tar.bz2"
 
 PATCH_URI="
-	1.5.8-boost.patch
-	1.5.8-convenience-libs.patch
-	1.5.8-demos-implib.patch
-	1.5.8-intltool.patch
-	1.5.8-perl.patch
-	1.5.8-tests-cygwin.patch
-	1.5.8-valac.patch
+	1.5.16-boost.patch
+	1.5.16-convenience-libs.patch
+	1.5.16-install-3rdparty.patch
+	1.5.16-perl.patch
+	1.5.16-tests-cygwin.patch
+	1.5.16-valadoc.patch
 "
 
 src_compile() {

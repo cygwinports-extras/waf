@@ -1,0 +1,18 @@
+--- origsrc/waf-1.5.16/wafadmin/Tools/ccroot.py	2010-04-10 13:01:38.000000000 -0500
++++ src/waf-1.5.16/wafadmin/Tools/ccroot.py	2010-05-12 21:25:01.629617200 -0500
+@@ -433,9 +433,13 @@ def apply_objdeps(self):
+ 			lst = y.to_list(y.add_objects)
+ 			lst.reverse()
+ 			for u in lst:
++				uf = self.name_to_obj(u)
+ 				if u in seen: continue
+-				added = 1
+-				names = [u]+names
++				if 'cshlib' in y.features and 'cstaticlib' in uf.features:
++					pass
++				else:
++					added = 1
++					names = [u]+names
+ 			if added: continue # list of names modified, loop
+ 
+ 		# safe to process the current object

@@ -1,6 +1,6 @@
---- origsrc/waf/wafadmin/Tools/boost.py	2009-07-20 15:22:56.000000000 -0500
-+++ src/waf/wafadmin/Tools/boost.py	2009-07-20 17:56:29.780073300 -0500
-@@ -244,7 +244,7 @@ def find_boost_library(self, lib, kw):
+--- origsrc/waf-1.5.16/wafadmin/3rdparty/boost.py	2010-05-12 21:25:00.221536700 -0500
++++ src/waf-1.5.16/wafadmin/3rdparty/boost.py	2010-05-12 21:25:01.625617000 -0500
+@@ -253,7 +253,7 @@ def find_boost_library(self, lib, kw):
  	(libname, file) = (None, None)
  	if kw['static'] in [STATIC_NOSTATIC, STATIC_BOTH]:
  		st_env_prefix = 'LIB'

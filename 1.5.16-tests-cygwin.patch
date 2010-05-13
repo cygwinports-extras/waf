@@ -1,0 +1,16 @@
+--- origsrc/waf-1.5.16/test/ccroot_test.py	2009-11-14 16:08:56.000000000 -0600
++++ src/waf-1.5.16/test/ccroot_test.py	2010-05-12 21:25:01.620616700 -0500
+@@ -177,9 +177,12 @@ def configure(conf):
+ 		else:
+ 			self.assert_(env['shlib_CXXFLAGS'] == ['-fPIC', '-DPIC'], 'incorrect shlib CXXFLAGS was %s' % env['shlib_CXXFLAGS'])
+ 
+-		if dest_os in ('win32', 'cygwin'):
++		if dest_os == 'win32':
+ 			self.assert_(env['program_PATTERN'] == '%s.exe', 'incorrect program pattern, was "%s", dest_os = %s' % (env['program_PATTERN'], dest_os))
+ 			self.assert_(env['shlib_PATTERN'] == '%s.dll', 'incorrect shlib pattern')
++		elif dest_os == 'cygwin':
++			self.assert_(env['program_PATTERN'] == '%s.exe', 'incorrect program pattern, was "%s", dest_os = %s' % (env['program_PATTERN'], dest_os))
++			self.assert_(env['shlib_PATTERN'] == 'cyg%s.dll', 'incorrect shlib pattern')
+ 		elif dest_os == 'linux2': # TODO potential problem here: ccroot.py's DEST_OS is supposed to be 'linux'
+ 			self.assert_(env['program_PATTERN'] == '%s', 'incorrect program pattern')
+ 			self.assert_(env['shlib_PATTERN'] == 'lib%s.so', 'incorrect shlib pattern')
