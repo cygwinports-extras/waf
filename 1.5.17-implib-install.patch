@@ -1,0 +1,12 @@
+--- origsrc/waf-1.5.17/wafadmin/Tools/ccroot.py	2010-05-24 11:23:38.246383400 -0500
++++ src/waf-1.5.17/wafadmin/Tools/ccroot.py	2010-05-24 11:52:00.532748600 -0500
+@@ -556,7 +556,8 @@ def apply_implib(self):
+ 
+ 	implib = dll.parent.find_or_declare(implib)
+ 	self.link_task.outputs.append(implib)
+-	self.bld.install_as('${LIBDIR}/%s' % implib.name, implib, self.env)
++	if self.install_path == os.path.abspath(self.env['LIBDIR'] + "/../bin"):
++		self.bld.install_as('${LIBDIR}/%s' % implib.name, implib, self.env)
+ 
+ 	self.env.append_value('LINKFLAGS', (self.env['IMPLIB_ST'] % implib.bldpath(self.env)).split())
+ 

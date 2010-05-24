@@ -22,21 +22,21 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack waf-1.5.16-X-src.tar.bz2
+  unpack waf-1.5.17-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./waf-1.5.16-X.cygport all
+  cygport ./waf-1.5.17-X.cygport all
 
 This will create:
-  /usr/src/waf-1.5.16-X-src.tar.bz2
-  /usr/src/waf-1.5.16-X.tar.bz2
+  /usr/src/waf-1.5.17-X-src.tar.bz2
+  /usr/src/waf-1.5.17-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
 
------ version 1.5.16-1 -----
+----- version 1.5.17-1 -----
 Version bump.
 
 ----- version 1.5.8.6447-1 -----
