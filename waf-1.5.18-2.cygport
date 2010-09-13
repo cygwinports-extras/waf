@@ -9,6 +9,7 @@ PATCH_URI="
 	1.5.16-install-3rdparty.patch
 	1.5.16-perl.patch
 	1.5.16-tests-cygwin.patch
+	1.5.18-vala010.patch
 "
 
 src_compile() {
