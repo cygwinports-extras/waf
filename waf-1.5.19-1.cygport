@@ -1,3 +1,5 @@
+inherit python
+
 DESCRIPTION="Python-based build system"
 HOMEPAGE="http://code.google.com/p/waf/"
 SRC_URI="http://waf.googlecode.com/files/${P}.tar.bz2"
@@ -31,9 +33,13 @@ src_install() {
 	local REVISION VERSION
 
 	cd ${B}
-	yes | DESTDIR=${D} ./waf-light install
+	dobin waf
 
-	eval $(grep -ah '^VERSION=' ${D}/usr/bin/waf)
-	eval $(grep -ah '^REVISION=' ${D}/usr/bin/waf)
-	mv ${D}/usr/lib/waf-* ${D}/usr/lib/waf-${VERSION}-${REVISION}
+	eval $(grep -ah '^VERSION=' waf)
+	eval $(grep -ah '^REVISION=' waf)
+	wafdir=/usr/lib/waf-${VERSION}-${REVISION}
+
+	dodir ${wafdir}
+	cp -Lr wafadmin/ ${D}${wafdir}/
+	python_optimize ${wafdir}
 }
