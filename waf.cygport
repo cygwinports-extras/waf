@@ -1,6 +1,13 @@
 inherit python
 
-DESCRIPTION="Python-based build system"
+NAME="waf"
+VERSION=1.5.19
+RELEASE=2
+CATEGORY="Devel"
+SUMMARY="Python-based build system"
+DESCRIPTION="Waf is a Python-based framework for configuring, compiling and
+installing applications. It derives from the concepts of other build tools
+such as Scons, Autotools, CMake or Ant."
 HOMEPAGE="http://code.google.com/p/waf/"
 SRC_URI="http://waf.googlecode.com/files/${P}.tar.bz2"
 
@@ -11,7 +18,6 @@ PATCH_URI="
 	1.5.16-install-3rdparty.patch
 	1.5.16-perl.patch
 	1.5.16-tests-cygwin.patch
-	1.5.18-vala010.patch
 "
 
 src_compile() {
